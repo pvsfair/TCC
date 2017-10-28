@@ -6,18 +6,18 @@ Type           : Worst-case tsu
 Slack          : -0.395 ns
 Required Time  : 1.000 ns
 Actual Time    : 1.395 ns
-From           : DRAM_DQ[30]
-To             : Sdram_Control_4Port:u9|mDATAOUT[14]
+From           : DRAM_DQ[31]
+To             : Sdram_Control_4Port:u9|mDATAOUT[15]
 From Clock     : --
 To Clock       : iCLK_50
 Failed Paths   : 32
 
 Type           : Worst-case tco
-Slack          : -4.961 ns
+Slack          : -5.022 ns
 Required Time  : 1.000 ns
-Actual Time    : 5.961 ns
-From           : Sdram_Control_4Port:u8|Sdram_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_m2o1:auto_generated|altsyncram_1l81:fifo_ram|altsyncram_drg1:altsyncram5|q_a[12]
-To             : DRAM_DQ[12]
+Actual Time    : 6.022 ns
+From           : Sdram_Control_4Port:u8|Sdram_FIFO:write_fifo2|dcfifo:dcfifo_component|dcfifo_m2o1:auto_generated|altsyncram_1l81:fifo_ram|altsyncram_drg1:altsyncram5|q_a[11]
+To             : DRAM_DQ[11]
 From Clock     : iCLK_50
 To Clock       : --
 Failed Paths   : 161
@@ -25,7 +25,7 @@ Failed Paths   : 161
 Type           : Worst-case tpd
 Slack          : N/A
 Required Time  : None
-Actual Time    : 10.645 ns
+Actual Time    : 10.590 ns
 From           : iSW[3]
 To             : oLEDR[3]
 From Clock     : --
@@ -35,7 +35,7 @@ Failed Paths   : 0
 Type           : Worst-case th
 Slack          : N/A
 Required Time  : None
-Actual Time    : 2.660 ns
+Actual Time    : 3.193 ns
 From           : altera_internal_jtag~TDIUTAP
 To             : pzdyqx:nabboc|pzdyqx_impl:pzdyqx_impl_inst|FNUJ6967
 From Clock     : --
@@ -63,37 +63,27 @@ To Clock       : --
 Failed Paths   : 1151
 
 Type           : Clock Setup: 'sdram_pll:u7|altpll:altpll_component|_clk0'
-Slack          : -4.482 ns
+Slack          : -3.392 ns
 Required Time  : 553.40 MHz ( period = 1.807 ns )
-Actual Time    : 159.01 MHz ( period = 6.289 ns )
-From           : Sdram_Control_4Port:u8|Sdram_FIFO:read_fifo1|dcfifo:dcfifo_component|dcfifo_m2o1:auto_generated|dffpipe_oe9:ws_bwp|dffe12a[1]
-To             : Sdram_Control_4Port:u8|mADDR[15]
-From Clock     : sdram_pll:u7|altpll:altpll_component|_clk0
+Actual Time    : N/A
+From           : Reset_Delay:u2|oRST_0
+To             : Sdram_Control_4Port:u9|mADDR[20]
+From Clock     : iCLK_50
 To Clock       : sdram_pll:u7|altpll:altpll_component|_clk0
-Failed Paths   : 13599
+Failed Paths   : 13600
 
 Type           : Clock Setup: 'DE2_70_SOPC:sopc_instance|pll:the_pll|altpll:sd1|_clk0'
-Slack          : -0.572 ns
+Slack          : -0.334 ns
 Required Time  : 100.00 MHz ( period = 10.000 ns )
-Actual Time    : 89.73 MHz ( period = 11.144 ns )
+Actual Time    : 93.74 MHz ( period = 10.668 ns )
 From           : DE2_70_SOPC:sopc_instance|cpu:the_cpu|d_address_tag_field[6]
 To             : Sdram_Control_4Port:u8|Sdram_FIFO:read_fifo2|dcfifo:dcfifo_component|dcfifo_m2o1:auto_generated|a_graycounter_o96:rdptr_g1p|counter_ffa[9]
 From Clock     : DE2_70_SOPC:sopc_instance|pll:the_pll|altpll:sd1|_clk0
 To Clock       : DE2_70_SOPC:sopc_instance|pll:the_pll|altpll:sd1|_clk0
-Failed Paths   : 1076
-
-Type           : Clock Setup: 'iCLK_50'
-Slack          : 1.524 ns
-Required Time  : 166.00 MHz ( period = 6.024 ns )
-Actual Time    : 222.22 MHz ( period = 4.500 ns )
-From           : Reset_Delay:u2|Cont[25]
-To             : Reset_Delay:u2|Cont[16]
-From Clock     : iCLK_50
-To Clock       : iCLK_50
-Failed Paths   : 0
+Failed Paths   : 127
 
 Type           : Clock Setup: 'iCLK_50_4'
-Slack          : 1.719 ns
+Slack          : 1.281 ns
 Required Time  : 50.00 MHz ( period = 20.000 ns )
 Actual Time    : N/A
 From           : DE2_70_SOPC:sopc_instance|DE2_70_SOPC_clock_0:the_DE2_70_SOPC_clock_0|DE2_70_SOPC_clock_0_slave_FSM:slave_FSM|slave_write_request
@@ -102,22 +92,32 @@ From Clock     : DE2_70_SOPC:sopc_instance|pll:the_pll|altpll:sd1|_clk0
 To Clock       : iCLK_50_4
 Failed Paths   : 0
 
+Type           : Clock Setup: 'iCLK_50'
+Slack          : 1.791 ns
+Required Time  : 166.00 MHz ( period = 6.024 ns )
+Actual Time    : 236.24 MHz ( period = 4.233 ns )
+From           : Reset_Delay:u2|Cont[11]
+To             : Reset_Delay:u2|Cont[3]
+From Clock     : iCLK_50
+To Clock       : iCLK_50
+Failed Paths   : 0
+
 Type           : Clock Setup: 'GPIO_CLKIN_N1'
-Slack          : 1.928 ns
+Slack          : 1.907 ns
 Required Time  : 110.01 MHz ( period = 9.090 ns )
-Actual Time    : 139.63 MHz ( period = 7.162 ns )
-From           : CCD_Capture:u3|Y_Cont[8]
-To             : RAW2RGB:u4|rGreen[7]
+Actual Time    : 139.22 MHz ( period = 7.183 ns )
+From           : CCD_Capture:u3|Y_Cont[11]
+To             : RAW2RGB:u4|rGreen[8]
 From Clock     : GPIO_CLKIN_N1
 To Clock       : GPIO_CLKIN_N1
 Failed Paths   : 0
 
 Type           : Clock Setup: 'vga_pll:u6|altpll:altpll_component|_clk0'
-Slack          : 2.775 ns
+Slack          : 3.035 ns
 Required Time  : 108.00 MHz ( period = 9.259 ns )
-Actual Time    : 154.23 MHz ( period = 6.484 ns )
-From           : VGA_Controller:u1|V_Cont[0]
-To             : VGA_Controller:u1|oVGA_R[2]
+Actual Time    : 160.67 MHz ( period = 6.224 ns )
+From           : Test_Module:u0|oRed[9]
+To             : VGA_Controller:u1|oVGA_G[0]
 From Clock     : vga_pll:u6|altpll:altpll_component|_clk0
 To Clock       : vga_pll:u6|altpll:altpll_component|_clk0
 Failed Paths   : 0
@@ -125,7 +125,7 @@ Failed Paths   : 0
 Type           : Clock Setup: 'altera_internal_jtag~TCKUTAP'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 119.30 MHz ( period = 8.382 ns )
+Actual Time    : 110.86 MHz ( period = 9.020 ns )
 From           : sld_hub:sld_hub_inst|irsr_reg[1]
 To             : sld_hub:sld_hub_inst|tdo
 From Clock     : altera_internal_jtag~TCKUTAP
@@ -135,9 +135,9 @@ Failed Paths   : 0
 Type           : Clock Setup: 'altera_internal_jtag~CLKDRUSER'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 406.50 MHz ( period = 2.460 ns )
-From           : pzdyqx:nabboc|pzdyqx_impl:pzdyqx_impl_inst|VELJ8121:JDCF0099|AJQN5180[0]
-To             : pzdyqx:nabboc|pzdyqx_impl:pzdyqx_impl_inst|VELJ8121:JDCF0099|AJQN5180[4]
+Actual Time    : 378.50 MHz ( period = 2.642 ns )
+From           : pzdyqx:nabboc|pzdyqx_impl:pzdyqx_impl_inst|VELJ8121:JDCF0099|AJQN5180[4]
+To             : pzdyqx:nabboc|pzdyqx_impl:pzdyqx_impl_inst|VELJ8121:JDCF0099|DJFL8584[0]
 From Clock     : altera_internal_jtag~CLKDRUSER
 To Clock       : altera_internal_jtag~CLKDRUSER
 Failed Paths   : 0
@@ -153,24 +153,14 @@ To Clock       : altera_internal_jtag~UPDATEUSER
 Failed Paths   : 0
 
 Type           : Clock Hold: 'iCLK_50'
-Slack          : -2.363 ns
+Slack          : -2.789 ns
 Required Time  : 166.00 MHz ( period = 6.024 ns )
 Actual Time    : N/A
-From           : I2C_CCD_Config:u10|senosr_exposure[13]
-To             : I2C_CCD_Config:u10|mI2C_DATA[13]
+From           : I2C_CCD_Config:u10|senosr_exposure[6]
+To             : I2C_CCD_Config:u10|mI2C_DATA[6]
 From Clock     : iCLK_50
 To Clock       : iCLK_50
-Failed Paths   : 115
-
-Type           : Clock Hold: 'GPIO_CLKIN_N1'
-Slack          : 0.299 ns
-Required Time  : 110.01 MHz ( period = 9.090 ns )
-Actual Time    : N/A
-From           : CCD_Capture:u3|Y_Cont[1]
-To             : RAW2RGB:u4|dval_ctrl
-From Clock     : GPIO_CLKIN_N1
-To Clock       : GPIO_CLKIN_N1
-Failed Paths   : 0
+Failed Paths   : 189
 
 Type           : Clock Hold: 'sdram_pll:u7|altpll:altpll_component|_clk0'
 Slack          : 0.391 ns
@@ -186,8 +176,8 @@ Type           : Clock Hold: 'DE2_70_SOPC:sopc_instance|pll:the_pll|altpll:sd1|_
 Slack          : 0.391 ns
 Required Time  : 100.00 MHz ( period = 10.000 ns )
 Actual Time    : N/A
-From           : DE2_70_SOPC:sopc_instance|cpu:the_cpu|cpu_nios2_oci:the_cpu_nios2_oci|cpu_nios2_oci_break:the_cpu_nios2_oci_break|trigbrktype
-To             : DE2_70_SOPC:sopc_instance|cpu:the_cpu|cpu_nios2_oci:the_cpu_nios2_oci|cpu_nios2_oci_break:the_cpu_nios2_oci_break|trigbrktype
+From           : DE2_70_SOPC:sopc_instance|uart:the_uart|uart_rx:the_uart_rx|baud_rate_counter[0]
+To             : DE2_70_SOPC:sopc_instance|uart:the_uart|uart_rx:the_uart_rx|baud_rate_counter[0]
 From Clock     : DE2_70_SOPC:sopc_instance|pll:the_pll|altpll:sd1|_clk0
 To Clock       : DE2_70_SOPC:sopc_instance|pll:the_pll|altpll:sd1|_clk0
 Failed Paths   : 0
@@ -200,6 +190,16 @@ From           : VGA_Controller:u1|mVGA_V_SYNC
 To             : VGA_Controller:u1|mVGA_V_SYNC
 From Clock     : vga_pll:u6|altpll:altpll_component|_clk0
 To Clock       : vga_pll:u6|altpll:altpll_component|_clk0
+Failed Paths   : 0
+
+Type           : Clock Hold: 'GPIO_CLKIN_N1'
+Slack          : 0.391 ns
+Required Time  : 110.01 MHz ( period = 9.090 ns )
+Actual Time    : N/A
+From           : CCD_Capture:u3|mCCD_FVAL
+To             : CCD_Capture:u3|mCCD_FVAL
+From Clock     : GPIO_CLKIN_N1
+To Clock       : GPIO_CLKIN_N1
 Failed Paths   : 0
 
 Type           : Clock Hold: 'iCLK_50_4'
@@ -230,7 +230,7 @@ From           :
 To             : 
 From Clock     : 
 To Clock       : 
-Failed Paths   : 17287
+Failed Paths   : 16413
 
 --------------------------------------------------------------------------------------
 

@@ -1,5 +1,5 @@
 Flow report for DE2_70_D5M_XVGA
-Mon Oct 16 16:27:33 2017
+Fri Oct 27 17:01:22 2017
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Flow Summary                                                                      ;
 +------------------------------------+----------------------------------------------+
-; Flow Status                        ; Flow Failed - Mon Oct 16 16:27:33 2017       ;
+; Flow Status                        ; Flow Failed - Fri Oct 27 17:01:22 2017       ;
 ; Quartus II Version                 ; 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition ;
 ; Revision Name                      ; DE2_70_D5M_XVGA                              ;
 ; Top-level Entity Name              ; DE2_70_D5M_XVGA                              ;
@@ -63,7 +63,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/16/2017 16:27:32 ;
+; Start date & time ; 10/27/2017 17:01:21 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; DE2_70_D5M_XVGA     ;
 +-------------------+---------------------+
@@ -74,18 +74,21 @@ applicable agreement for further details.
 +-------------------------------------+-----------------------------------------------------------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                                                                   ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+-----------------------------------------------------------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 167690713898264.150818205207296                                                         ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 167690713898264.150913448117440                                                         ; --            ; --          ; --         ;
 ; ENABLE_SIGNALTAP                    ; Off                                                                                     ; --            ; --          ; --         ;
 ; MISC_FILE                           ; C:/Users/LAAI/Downloads/d5m quartus9/DE2_70_CAMERA/HW/DE2_70_CAMERA/DE2_70_D5M_XVGA.dpf ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; 2147039                                                                                 ; --            ; --          ; Top        ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                                                                   ; --            ; --          ; Top        ;
 ; PARTITION_NETLIST_TYPE              ; SOURCE                                                                                  ; --            ; --          ; Top        ;
+; PHYSICAL_SYNTHESIS_COMBO_LOGIC      ; On                                                                                      ; Off           ; --          ; --         ;
 ; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                                                                     ; --            ; --          ; --         ;
 ; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                                                   ; --            ; --          ; --         ;
 ; SMART_RECOMPILE                     ; On                                                                                      ; Off           ; --          ; --         ;
 ; SOPC_BUILDER_SIGNATURE_ID           ; E0cb4ec7f4460000012a5f3db870                                                            ; --            ; --          ; --         ;
 ; USER_LIBRARIES                      ; ip/terasic_camera                                                                       ; --            ; --          ; --         ;
 ; USE_SIGNALTAP_FILE                  ; stp1.stp                                                                                ; --            ; --          ; --         ;
+; VERILOG_INPUT_VERSION               ; SystemVerilog_2005                                                                      ; Verilog_2001  ; --          ; --         ;
+; VERILOG_SHOW_LMF_MAPPING_MESSAGES   ; Off                                                                                     ; --            ; --          ; --         ;
 +-------------------------------------+-----------------------------------------------------------------------------------------+---------------+-------------+------------+
 
 
@@ -94,7 +97,7 @@ applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:01     ; 1.0                     ; 263 MB              ; 00:00:01                           ;
+; Analysis & Synthesis ; 00:00:01     ; 1.0                     ; 262 MB              ; 00:00:01                           ;
 ; Total                ; 00:00:01     ; --                      ; --                  ; 00:00:01                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 

@@ -49,25 +49,26 @@ assign	gray	=	(((iRed + iGreen + iBlue) / 3) < 127) ?  0 :
 					((((iRed + iGreen + iBlue) / 3) < 383) ? 255 : 
 					(((((iRed + iGreen + iBlue) / 3) < 639) ? 511 :  
 					((((((iRed + iGreen + iBlue) / 3) < 895) ? 767 : 1023))))));
-	*/
+	
 
-assign rgb		= adder(int_to_float(iRed), adder(int_to_float(iGreen), int_to_float(iBlue)));
-assign r		= divider(int_to_float(iRed), rgb); //iRed/(iRed + iGreen + iBlue);
-assign g		= divider(int_to_float(iGreen), rgb); //iGreen/(iRed + iGreen + iBlue);
+assign rgb		= iRed + iGreen + iBlue; //adder(int_to_float(iRed), adder(int_to_float(iGreen), int_to_float(iBlue)));
+assign r		= iRed / rgb; //divider(int_to_float(iRed), rgb); //iRed/(iRed + iGreen + iBlue);
+assign g		= iGreen / rgb; //divider(int_to_float(iGreen), rgb); //iGreen/(iRed + iGreen + iBlue);
 
-assign r2		= multiplier(r,r);
-assign f1r		= adder(multiplier(32'hbfb020c5, r2), adder(multiplier(32'h3f8982aa, r), 32'h40200000));  //-1.376*r*r + 1.0743*r + 2.5;
-assign f2r		= adder(multiplier(32'hbf46a7f0, r2), adder(multiplier(32'h3f0f62b7, r), 32'h3e3851ec));  //-0.776*r*r + 0.5601*r + 0.18;
+assign r2		= r*r; //multiplier(r,r);
+assign f1r		= -1.376 * r2 + 1.0743 * r + 2.5; //adder(multiplier(32'hbfb020c5, r2), adder(multiplier(32'h3f8982aa, r), 32'h40200000));  //-1.376*r*r + 1.0743*r + 2.5;
+assign f2r		= -0.776 * r2 + 0.5601 * r + 0.18; //adder(multiplier(32'hbf46a7f0, r2), adder(multiplier(32'h3f0f62b7, r), 32'h3e3851ec));  //-0.776*r*r + 0.5601*r + 0.18;
 
 //assign w		= adder(multiplier(adder(r,32'h3ea8f5c3),adder(r,32'h3ea8f5c3)), multiplier(adder(g,32'h3ea8f5c3),adder(g,32'h3ea8f5c3)));  //(r - 0.33) * (r - 0.33) + (g - 0.33) * (g - 0.33);
-assign w		= adder(r2, adder(multiplier(g,g),adder(multiplier(32'hbf28f5c3, adder(r,g)),32'h3e5f06f7)));  //(r2+(g2+(-0.66(r+g)+0.2178)))
+assign w		= (r2 + (g * g) + (r + g * -0.66) + 0.2178); //adder(r2, adder(multiplier(g,g),adder(multiplier(32'hbf28f5c3, adder(r,g)),32'h3e5f06f7)));  //(r2+(g2+(-0.66(r+g)+0.2178)))
+*/
 
-
-
+Test_ModuleVhd		u1(.r(iRed), .g(iGreen), .b(iBlue), .ro(mRed), .bo(mGreen), .go(mBlue));
+/*
 assign mRed		= iRed;
 assign mGreen	= iGreen;
 assign mBlue	= iBlue;
-
+*/
 always@(posedge iCLK or negedge iRST_N)
 	begin
 	
@@ -80,18 +81,18 @@ always@(posedge iCLK or negedge iRST_N)
 				oGreen <= 0;
                 oBlue <= 0;
 			end
-		else if (greater_than(f1r, g) && greater_than(g, f2r) && greater_than(w, 32'h3a83126f))  //((f1r > g) && (g > f2r) && (w > 0.001))
+		else //if ((f1r > g) && (g > f2r) && (w > 0.001)) //(greater_than(f1r, g) && greater_than(g, f2r) && greater_than(w, 32'h3a83126f))  //((f1r > g) && (g > f2r) && (w > 0.001))
 			begin
 				oRed <= mRed;
 				oGreen <= mGreen;
 				oBlue <= mBlue;
 			end
-		else
+		/*else
 			begin
 				oRed <= 0;
 				oGreen <= 0;
 				oBlue <= 0;
-			end
+			end*/
 	end
 
 

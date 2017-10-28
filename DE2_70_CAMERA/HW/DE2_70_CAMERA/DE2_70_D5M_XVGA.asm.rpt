@@ -1,5 +1,5 @@
 Assembler report for DE2_70_D5M_XVGA
-Sat Oct 07 00:25:45 2017
+Fri Oct 27 16:00:50 2017
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
@@ -10,7 +10,7 @@ Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: C:/Users/pvsfa/Documents/Pasta/d5m quartus9/DE2_70_CAMERA/HW/DE2_70_CAMERA/DE2_70_D5M_XVGA_time_limited.sof
+  5. Assembler Device Options: D:/GitHubRepos/TCC/DE2_70_CAMERA/HW/DE2_70_CAMERA/DE2_70_D5M_XVGA_time_limited.sof
   6. Assembler Messages
 
 
@@ -37,7 +37,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Sat Oct 07 00:25:45 2017 ;
+; Assembler Status      ; Successful - Fri Oct 27 16:00:50 2017 ;
 ; Revision Name         ; DE2_70_D5M_XVGA                       ;
 ; Top-level Entity Name ; DE2_70_D5M_XVGA                       ;
 ; Family                ; Cyclone II                            ;
@@ -76,24 +76,24 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+----------+---------------+
 
 
-+-------------------------------------------------------------------------------------------------------------+
-; Assembler Generated Files                                                                                   ;
-+-------------------------------------------------------------------------------------------------------------+
-; File Name                                                                                                   ;
-+-------------------------------------------------------------------------------------------------------------+
-; C:/Users/pvsfa/Documents/Pasta/d5m quartus9/DE2_70_CAMERA/HW/DE2_70_CAMERA/DE2_70_D5M_XVGA_time_limited.sof ;
-+-------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------+
+; Assembler Generated Files                                                          ;
++------------------------------------------------------------------------------------+
+; File Name                                                                          ;
++------------------------------------------------------------------------------------+
+; D:/GitHubRepos/TCC/DE2_70_CAMERA/HW/DE2_70_CAMERA/DE2_70_D5M_XVGA_time_limited.sof ;
++------------------------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/Users/pvsfa/Documents/Pasta/d5m quartus9/DE2_70_CAMERA/HW/DE2_70_CAMERA/DE2_70_D5M_XVGA_time_limited.sof ;
-+----------------+----------------------------------------------------------------------------------------------------------------------+
-; Option         ; Setting                                                                                                              ;
-+----------------+----------------------------------------------------------------------------------------------------------------------+
-; Device         ; EP2C70F896C6                                                                                                         ;
-; JTAG usercode  ; 0xFFFFFFFF                                                                                                           ;
-; Checksum       ; 0x00D18CED                                                                                                           ;
-+----------------+----------------------------------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: D:/GitHubRepos/TCC/DE2_70_CAMERA/HW/DE2_70_CAMERA/DE2_70_D5M_XVGA_time_limited.sof ;
++----------------+---------------------------------------------------------------------------------------------+
+; Option         ; Setting                                                                                     ;
++----------------+---------------------------------------------------------------------------------------------+
+; Device         ; EP2C70F896C6                                                                                ;
+; JTAG usercode  ; 0xFFFFFFFF                                                                                  ;
+; Checksum       ; 0x00D3255B                                                                                  ;
++----------------+---------------------------------------------------------------------------------------------+
 
 
 +--------------------+
@@ -102,7 +102,7 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II Assembler
     Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
-    Info: Processing started: Sat Oct 07 00:25:41 2017
+    Info: Processing started: Fri Oct 27 16:00:47 2017
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off DE2_70_D5M_XVGA -c DE2_70_D5M_XVGA
 Info: Writing out detailed assembly data for power analysis
 Info: Assembler is generating device programming files
@@ -110,9 +110,9 @@ Info: Design contains a time-limited core -- only a single, time-limited program
 Warning: Can't convert time-limited SOF into POF, HEX File, TTF, or RBF
 Info: The Active Serial/Parallel mode CONF_DONE pin error check is disabled
 Info: Quartus II Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 378 megabytes
-    Info: Processing ended: Sat Oct 07 00:25:45 2017
-    Info: Elapsed time: 00:00:04
+    Info: Peak virtual memory: 379 megabytes
+    Info: Processing ended: Fri Oct 27 16:00:50 2017
+    Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:04
 
 
